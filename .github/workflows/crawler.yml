@@ -2,6 +2,8 @@ name: Get Hot News
 
 on:
   schedule:
+    #enabled: true
+    # preset: "morning_evening" # 改这里就行 
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     # ⚠️ 试用版说明 / Trial Mode
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -35,7 +37,11 @@ on:
     #   "15 * * * *"     → 每小时第15分钟 / minute 15 every hour
     #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第30分钟 / Beijing 8am-10pm
     #
-    - cron: "13 * * * *"
+    #enabled: true
+    #preset: "morning_evening"
+    - cron: "0 0,5,9 * * *"
+      # enabled: true
+      # preset: "morning_evening"
 
   workflow_dispatch:
 
